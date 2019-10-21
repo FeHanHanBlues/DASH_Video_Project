@@ -1,0 +1,2 @@
+sudo /usr/local/nginx/sbin/nginx
+ffmpeg -re -i /home/gudiandian/Downloads/maerdaifu.mp4 -vcodec copy -acodec copy -b:a 128k -b:v 500k -minrate 500k -maxrate 500k -f flv rtmp://localhost/dash/test_low -vcodec copy -acodec copy -b:a 128k -b:v 1500k -minrate 1500k -maxrate 1500k -f flv rtmp://localhost/dash/test_med -vcodec copy -acodec copy -b:a 128k -b:v 5000k -minrate 5000k -maxrate 5000k -f flv rtmp://localhost/dash/test_high
